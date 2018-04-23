@@ -14,4 +14,4 @@ This project uses:
 
 ## Configure Acc.ini
 - Use the mfbot desktop application to create your Acc.ini initially
-- Setup remote access to mfbot using the Port 1024
+- Setup remote access to mfbot using the Port 1024 (I guess? This doesn't seem to be under development anymore.)
