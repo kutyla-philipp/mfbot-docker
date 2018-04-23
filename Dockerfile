@@ -1,4 +1,6 @@
-FROM ubuntu:latest
+FROM ubuntu:trusty
+
+COPY docker-entrypoint.sh /
 
 RUN \
 	apt-get update && \
@@ -6,8 +8,9 @@ RUN \
 	mkdir /mfbot && \
 	cd /mfbot && \
 	wget https://www.mfbot.de/Download/latest/MFBot_Konsole_x86_64 && \
-	chmod a+x MFBot_Konsole_x86_64
+	chmod a+x MFBot_Konsole_x86_64  && \
+	chmod a+x /docker-entrypoint.sh
 
 EXPOSE 1024/tcp
 
-ENTRYPOINT ["/mfbot/MFBot_Konsole_x86_64"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
