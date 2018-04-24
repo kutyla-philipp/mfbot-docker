@@ -1,5 +1,4 @@
 #!/bin/bash
-cp /config/Acc.ini /mfbot/Acc.ini
 cd /mfbot/
 screen -A -m -d -S mfbot ./MFBot_Konsole_x86_64
 while [ ! -f /mfbot/logs/General.log ] ;
