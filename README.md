@@ -7,11 +7,11 @@ https://www.mfbot.de/
 This project uses:
 - MagicalFidget-Bot
 - Ubuntu
-- Mono-Runtime
 - Docker (duh.)
 
 ## To Use
-- docker run -p 1024:1024  -e TZ="Europe/Berlin" -it -v /PATH-ON-YOUR-HOST/Acc.ini:/mfbot/Acc.ini -v /PATH-ON-YOUR-HOST/logs/:/mfbot/logs/ kukielka/mfbot
+- docker run -p 1024:1024  -e TZ="Europe/Berlin" -it -v /PATH-ON-YOUR-HOST/Acc.ini:/mfbot/Acc.ini kukielka/mfbot
 
 ## Configure Acc.ini
 - Use the mfbot desktop application to create your Acc.ini initially
+- Setup remote access to mfbot using the Port 1024 (I guess? This doesn't seem to be under development anymore.)
