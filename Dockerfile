@@ -12,6 +12,4 @@ COPY docker-entrypoint.sh /
 
 RUN chmod a+x /docker-entrypoint.sh
 
-EXPOSE 1024
-
 ENTRYPOINT ["/docker-entrypoint.sh"]
