@@ -3,13 +3,12 @@ LABEL maintainer="Kukielka <Kukielka58@gmail.com>"
 
 RUN apt-get update && \
 	apt-get install -y wget mono-runtime libsqlite3-dev screen && \
-	mkdir /mfbot && \
-	cd /mfbot && \
-	wget https://www.mfbot.de/Download/latest/MFBot_Konsole_x86_64 && \
-	chmod a+x MFBot_Konsole_x86_64
+	mkdir /mfbot	
 	
 COPY docker-entrypoint.sh /
+COPY downloadBot.sh /
 
 RUN chmod a+x /docker-entrypoint.sh
+RUN chmod a+x /downloadBot.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
